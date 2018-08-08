@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <!-- TAGS OBRIGATÓRIAS -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- TÍTULO DA PAGINA-->
+        <title>JSON Trello to PDF</title>
+
+        <!-- INICIALIZAÇÃO MATERIALIZE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- INICIALIZAÇÃO JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h2 class="center-align">JSON Trello to PDF</h2>
+
+        <h5 class="center-align">Upload your file here</h5>
+
+        <div class="center-align">
+            <form id="jsonTrello" action="#">
+                <div class="row">
+                    <div class="col s4"></div>
+                    <div class="file-field input-field col s4">
+                        <div class="btn col s2">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input id="file" name="file" class="file-path validate" type="text">
+                        </div>
+                    </div>
+                    <div class="col s4"></div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <!-- Carregar arquivo no submit -->
+        <script>
+            $('#jsonTrello').submit(function (form) {
+                form.preventDefault();
+                console.log($('#jsonTrello').serialize());
+
+            });
+        </script>
+    </body>
+</html>
+
+
